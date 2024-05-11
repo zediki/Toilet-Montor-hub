@@ -164,7 +164,7 @@ Section2:Toggle({
       while value == true do
        task.wait(lastDelaytoScan)
           for I, otherPlayer in pairs(Players:GetPlayers()) do
-              if otherPlayer ~= otherPlayer then
+              if otherPlayer ~= LocalPlayer then
                   if otherPlayer.Character and otherPlayer.Character:FindFirstChildOfClass("Humanoid") then
                       if LocalPlayer.Character.PrimaryPart then
                           if otherPlayer.Character.PrimaryPart then
