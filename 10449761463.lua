@@ -166,7 +166,9 @@ Section2:Toggle({
       while lastKillstealer == true do
        task.wait(lastDelaytoScan)
           for I, otherPlayer in pairs(Players:GetPlayers()) do
-              if otherPlayer ~= LocalPlayer then
+				print(otherPlayer)
+				print(LocalPlayer)
+              if otherPlayer.Name ~= LocalPlayer.Name then
                   if otherPlayer.Character and otherPlayer.Character:FindFirstChildOfClass("Humanoid") then
                       if LocalPlayer.Character.PrimaryPart then
                           if otherPlayer.Character.PrimaryPart then
