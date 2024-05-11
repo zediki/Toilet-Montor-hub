@@ -16,6 +16,7 @@ print("UI Loaded!")
 
 
 local debugLog = true
+local lastKillstealer = false
 local lastWalkSpeed = 16
 local lastJumpPower = 50
 local lastHealthToTp = 20
@@ -161,7 +162,8 @@ Section2:Toggle({
     }, function(value)
 
       debugLogMsg(value, "print")
-      while value == true do
+    lastKillstealer = value
+      while lastKillstealer == true do
        task.wait(lastDelaytoScan)
           for I, otherPlayer in pairs(Players:GetPlayers()) do
               if otherPlayer ~= LocalPlayer then
@@ -187,7 +189,7 @@ Section2:Toggle({
                     debugLogMsg(player.Name, "doest has character or humanoid")
                   end
               else
-                debugLogMsg("Bruh")
+                debugLogMsg("otherPlayer == localplayer")
               end
           end
       end
