@@ -192,6 +192,7 @@ Section2:Toggle({
                   end
               else
                 debugLogMsg("otherPlayer == localplayer")
+					print("я ебал")
               end
           end
       end
