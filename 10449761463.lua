@@ -44,9 +44,16 @@ end
 local function setHumanoidValue(change, value, last)
   if last then
     if change == "WalkSpeed" then
-      humanoid[change] = lastWalkSpeed
+humanoid[change] = lastWalkSpeed
+			humanoid[change].Changed:Connect(function()
+humanoid[change] = lastWalkSpeed
+				end)
     elseif change == "JumpPower" then
       humanoid[change] = lastJumpPower
+humanoid[change].Changed:Connect(function()
+humanoid[change] = lastJumpPower
+				end)
+
     end
     return
   end
